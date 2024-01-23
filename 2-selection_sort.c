@@ -3,33 +3,22 @@
 #include "sort.h"
 
 /**
- * main - Entry point
+ * print_list - Prints a list of integers
  *
- * Return: Always 0
+ * @list: The list to be printed
  */
-void bubble_sort(int *array, size_t size)
+void swap(int *ls_vl, int *hg_vl)
 {
-        size_t j, i;
-        if (size < 2)
-        {return;
-        }
+	int temp;
 
-
-        for (i = 0; i < size - 1; i++)
-        {
-                for (j = 0; j < size - 1; j++)
-                {
-                        if (array[j] > array[j + 1])
-                        {
-                                swap(&array[j], &array[j + 1]);
-                                print_array(array, size);
-                        }
-                }
-        }
+	temp = *ls_vl;
+	*ls_vl = *hg_vl;
+	*hg_vl = temp;
 }
 
 /**
  * main - Entry point
+ *
  *
  * Return: Always 0
  */
@@ -47,13 +36,13 @@ void selection_sort(int *array, size_t size)
 	{
 		min_value = i;
 
-			for (j = i + 1; j < size; j++)
+		for (j = i + 1; j < size; j++)
+		{
+			if (array[j] < array[min])
 			{
-				if (array[j] < array[min])
-				{
-					min_value = j;
-				}
+				min_value = j;
 			}
+		}
 		if (min_value != i)
 		{
 			swap(&array[i], &array[min]);
