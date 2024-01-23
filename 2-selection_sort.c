@@ -3,9 +3,10 @@
 #include "sort.h"
 
 /**
- * print_list - Prints a list of integers
+ * swap - this swaps two integers in an array
+ * @ls_vl: the first integer to be swapped
  *
- * @list: The list to be printed
+ * @hg_vl: the second integer to be swapped
  */
 void swap(int *ls_vl, int *hg_vl)
 {
@@ -17,10 +18,11 @@ void swap(int *ls_vl, int *hg_vl)
 }
 
 /**
- * main - Entry point
- *
- *
- * Return: Always 0
+ * selection_sort - Sort an array of integers in ascending order
+ * using the selection sort algorithm
+ * @array : array of integer
+ * @size size of array
+ * Description : This prints the array after each swap is done
  */
 void selection_sort(int *array, size_t size)
 {
