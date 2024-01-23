@@ -3,9 +3,12 @@
 #include "sort.h"
 
 /**
- * main - Entry point
+ * bubble_sort - sorts an array of integers in ascending order
+ * using the bubble sort algorithm
  *
- * Return: Always 0
+ * @array: the array that is meant to be sorted
+ * @size: size of the array
+ * Return: none
  */
 void bubble_sort(int *array, size_t size)
 {
