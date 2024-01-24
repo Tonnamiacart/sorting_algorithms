@@ -3,6 +3,21 @@
 #include "sort.h"
 
 /**
+ * swap - this swaps two integers in an array
+ * @ls_vl: the first integer to be swapped
+ *
+ * @hg_vl: the second integer to be swapped
+ */
+void swap(int *ls_vl, int *hg_vl)
+{
+	int temp;
+
+	temp = *ls_vl;
+	*ls_vl = *hg_vl;
+	*hg_vl = temp;
+}
+
+/**
  * bubble_sort - sorts an array of integers in ascending order
  * using the bubble sort algorithm
  *
@@ -13,8 +28,10 @@
 void bubble_sort(int *array, size_t size)
 {
 	size_t j, i;
+
 	if (size < 2)
-	{return;
+	{
+		return;
 	}
 
 
